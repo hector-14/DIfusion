@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    background-color: #f1f1f1;
+}
+
+/* -------------- Estilos barra superior ----------------*/
+
+#barraSuperior{
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    transition: 0.7s;
+    padding: 5px;
+    z-index: 100;
+}
+
+#barraSuperior.abajo{
+    /*background: rgb(10 10 10);*/
+    /*background: #1DB521;*/
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    z-index: 100;
+}
+
+#barraSuperior .contenedor{
+    display: flex;
+    justify-content:space-between;   
+}
+
+#barraSuperior .contenedor .imagen{
+    width: 180px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#barraSuperior ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 65px;    
+}
+
+#barraSuperior .contenedor ul li{
+    list-style: none;
+    margin: 0px 30px;
+}
+
+#barraSuperior .contenedor ul li a{
+    text-decoration: none;
+    color: rgb(36, 34, 34);
+    font-size: 1.1em;
+}
+
+#barraSuperior .contenedor ul li .btn{
+    border: 1px solid #3cd908e3;
+    background-color: #08af04c4;
+    color: white;
+    border-radius: 3px;   
+    display: flex;
+    width: 100px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+}
+
+#barraSuperior .contenedor ul li .btn:hover{
+    color: #40d313;
+    background-color: #ffffff;
+    border: 3px solid rgba(54, 179, 4, 0.8);
+    box-shadow: 0 2px 10px rgba(34, 34, 34, 0.75);
+}
+
+#barraSuperior .contenedor ul li a img{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+}
+
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 700px) {
+    #barraSuperior .contenedor {
+        display: flex;
+        align-items: center; /* Centra los elementos */
+        flex-direction: column;
+        /*transform: translateX(-40px);*/
+    }
+    
+    #barraSuperior .contenedor .imagen{
+        /*padding-bottom: 8px;*/
+        margin: 0px;
+    }
+
+    #barraSuperior .contenedor ul {
+        height: auto; /* Cambia la altura a automática */
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+
+    #barraSuperior .contenedor ul li {
+        padding: 0px 20px;
+        margin: 0px; /* Ajusta los márgenes de los elementos */
+    }
+
+    #barraSuperior .contenedor ul li .btn {
+        width: 80px; /* Redefine el ancho del botón */
+        height: 32px; /* Redefine la altura del botón */
+    }
+
+    #barraSuperior .contenedor ul li a img {
+        width: 30px; /* Redefine el tamaño de las imágenes */
+        height: 30px; /* Redefine el tamaño de las imágenes */
+    }
+}

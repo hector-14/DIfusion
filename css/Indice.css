@@ -1,0 +1,630 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    background-color: rgb(245, 245, 245);
+}
+
+/* ------------------------------ Menú Lateral ------------------------------ */
+
+#Menu-lateral .menu{
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+    top: 76px;
+    z-index: 99;
+    transition: right 0.3s;
+    right: -162px;
+}
+
+#Menu-lateral .menu:hover{
+    width: 50%;
+}
+
+#Menu-lateral .menu nav{
+    background: rgba( 20 20 20 /0.75);
+    border: 1px solid #40d313;
+    height: 100%;
+}
+
+#Menu-lateral .menu nav li{
+    list-style: none;
+    padding: 50px 0px;
+}
+
+#Menu-lateral .menu nav li a{
+    text-decoration: none;
+    color: #06b706;
+}
+
+/* ----------------------------------- Selector de Imagenes ---------------------------------*/
+
+#Selector{
+    width: 100%;
+    height: 100%;
+    margin-top: 77px;
+}
+
+#Selector .Imagenes{
+    margin: 0px 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+#Selector .Imagenes .primer{
+    width: 100%;
+    height: 485px;
+    position: relative;
+}
+
+#Selector .Imagenes .primer .main{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+
+#Selector .Imagenes .Cartas{
+    height: 80px;
+    display: flex;
+    position: absolute;
+    transition: 0.5s;
+}
+
+#Selector .Imagenes .Cartas .carta{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    top: calc(-50% - 370px);
+    left: calc(50% + 435px);
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: cover;
+    opacity: .9;
+    transition: left 0.5s ease-in-out;
+    border: 2px solid white;
+}
+
+#Selector .Imagenes .Cartas .carta:nth-child(1){
+    left:calc(800px);
+    transition: left 0.5s ease-in-out;
+}
+
+#Selector .Imagenes .Cartas .carta:nth-child(2){
+    left:calc(650px);
+    transition: left 0.5s ease-in-out;
+}
+
+#Selector .Imagenes .Cartas .carta:nth-child(3){
+    left:calc(500px);
+}
+
+#Selector .Imagenes .Cartas .carta:nth-child(4){
+    left:calc(350px);
+}
+
+
+.active{
+    opacity: 1 !important;
+    box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
+    transition: left 0.5s ease-in-out;
+    /*animation:showcontent 1s ease-in-out 1 forwards*/
+}
+
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+}
+
+/* ------------------------------ Misión y Visión ----------------------------------- */
+
+#mision .mision-vision{
+    width: auto;
+    padding: 10px 5px;
+    border-bottom: 1.5px solid #40d313; 
+}
+
+#mision .mision-vision ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255 255 255);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(20 20 20 /0.2);
+    text-align: center;
+}
+
+#mision .mision-vision ul li{
+    list-style: none;
+    padding: 20px 30px;
+}
+
+#mision .mision-vision ul li img{
+    height: auto;
+}
+
+#mision .mision-vision ul li h1{
+    text-align: center;
+    margin: 10px 0px;
+}
+#mision .mision-vision ul li p{
+    text-align: center;
+    margin: 0px 5px;
+    font-size: 1.2em;
+}
+
+/* -------------------------------- Titulo de oferta --------------------------*/
+
+#titulo{
+    height: 120px;
+    padding: 30px 0px;
+    background-color: #f6f6f6;
+    /*border-bottom: 2px solid #40d313;*/
+}
+#titulo .oferta{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#titulo .oferta h1{
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.65);
+    /*color:#40d313;*/
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffffff;
+    width: 50%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px rgba(0 0 0 /0.3);
+    border-radius: 5px;
+}
+
+/* ------------------------------- Contenido oferta -------------------------- */
+
+#descripcion {
+    position: relative;
+    padding: 30px 10px;
+}
+
+#descripcion .imagen-texto {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+#descripcion .imagen {
+    width: 50%;
+    position: sticky; /* Fija la imagen en su posición */
+    top: 0; /* Fija la imagen en la parte superior */
+    height: 100vh; /* Ocupa el 100% del viewport */
+    overflow: hidden; /* Evita que la imagen se desborde */
+    padding: 0px 90px;
+}
+
+#descripcion .imagen img {
+    padding: 50px;
+    width: 440px;
+    height: 559px;
+    object-fit: cover;
+    margin-top: 40px;
+}
+
+#descripcion .imagen::before {
+    content: "";
+    display: block;
+    height: 30px; /* Ajusta la altura para evitar solapamiento */
+}
+
+#descripcion .Carreras {
+    width: 50%;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2; /* Asegura que esté por encima de la imagen */
+}
+
+
+#descripcion .imagen-texto .Carreras .contenidoC{
+    padding: 0px 20px;
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC h2{
+    color: #40d313;
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC h2#barra::before{
+    content: "";
+    width: 1px;
+    height: 10%;
+    position: absolute;
+    background-color: rgba(0 0 0 /0.6);
+    left: calc(3%);
+    transform: translateY(-208px);
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC h2::after{
+    content: "";
+    border-radius: 15px;
+    border: 2px solid #40d313;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #ffffff;
+    left: calc(1.5%);
+    z-index: 1;
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC a{
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(20 20 20 / 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    /* border: 1px solid #750375; */
+    /* background-color: #1db527; */
+    box-shadow: 0px 5px 10px rgba(0 0 0 /0.5);
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC a:hover{
+    background-color: rgba(18, 141, 2, 0.822);
+    color: #ffffff;
+}
+
+
+/* -------------------------------- Titulo de Otros --------------------------*/
+
+#titulo2 .otro{
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #40d313;
+}
+
+#titulo2 .otro h1{
+    color: #06b706;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* --------------------- Titulo de Datos Interesdantes ----------------- */
+
+#titulo3 .DatosI{
+    height: 120px;
+    padding: 30px 0px;
+    width: 100%;
+    border-bottom: 2px solid #40d313;
+}
+
+#titulo3 .DatosI h1{
+    margin: 0px;
+    color:#40d313;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+
+
+/*---------------------------- Galeria ----------------------------------*/
+
+#Galeria{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #40d313;
+    padding: 40px 10px 0px 10px;
+}
+
+#Galeria .Mosaico{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 24.2% 24.2% 24.2% 24.2%;
+    grid-template-rows: 180px 180px 180px 180px;
+    grid-gap: 10px;
+}
+
+#Galeria .Mosaico img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s; 
+}
+
+
+#Galeria .Mosaico .foto-1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+}
+
+
+#Galeria .Mosaico .fotos-2{
+    grid-column: 3/5;
+    border: 1px #f6f6f6;
+    
+}
+
+#Galeria .Mosaico .fotos-3{
+    grid-column: 3/5;
+    grid-row: 2/4;
+    
+}
+
+#Galeria .Mosaico .fotos-4{
+    grid-column: 1/3;
+}
+
+#Galeria .Mosaico .fotos-5{
+    grid-column: 1/3;
+}
+
+#Galeria .Mosaico .fotos-6{
+    grid-column: 3/5;
+}
+
+#Galeria .Mosaico .imagen-con-texto {
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+#Galeria .Mosaico .imagen-con-texto .texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.5); /* Fondo inicialmente transparente */
+    color: rgb(24, 155, 19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transición de opacidad */
+}
+
+#Galeria .Mosaico .imagen-con-texto:hover .texto{
+    opacity: 0; /* Muestra el texto al pasar el cursor */
+}
+
+#Galeria .Mosaico .imagen-con-texto:hover img{
+    transform: scale(1.04);
+}
+
+
+/* -------------------------- Datos Interesantes ----------------------- */
+
+#Datos{
+    display: flex;
+    border-bottom: 2px solid #40d313;
+    margin-top: 20px;
+}
+
+#Datos .Datos-Mosaico{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 200px 200px;
+}
+
+#Datos .Datos-Mosaico .dato-1,
+#Datos .Datos-Mosaico .dato-2,
+#Datos .Datos-Mosaico .dato-3,
+#Datos .Datos-Mosaico .dato-4,
+#Datos .Datos-Mosaico .dato-5,
+#Datos .Datos-Mosaico .dato-6{
+    margin: 10px 40px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#Datos .Datos-Mosaico .Imagen-con-Texto h1{
+    margin: 0;
+}
+
+#Datos .Datos-Mosaico .Imagen-con-Texto{
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+#Datos .Datos-Mosaico .Imagen-con-Texto .Texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 1);
+    color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#Datos .Datos-Mosaico .Imagen-con-Texto .Texto span{
+    line-height: 1.5em;
+}
+
+#Datos .Datos-Mosaico .Imagen-con-Texto:hover .Texto{
+    opacity: 1; /* Muestra el texto al pasar el cursor */
+}
+
+/* ----------------------------- Sitios de Interés ------------------------- */
+
+#Enlaces {
+    width: 100%;
+    height: 220px;
+    border-bottom: 2px solid #40d313;
+}
+
+#Enlaces .Sitios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;;
+}
+
+#Enlaces .Sitios .Paginas{
+    padding: 0px 15px;
+    /*width: 200px;*/
+    height: 85px;
+}
+
+#Enlaces .Sitios .Paginas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*------------------ Resposive --------------- */
+
+@media (max-width: 700px){
+
+    /* --------------- Carrusel */
+    .slideshow-container {
+        width: 100%;
+        height: 450px;
+        margin-top: 115px;
+    } 
+    
+    .slideshow-container .mySlides img {
+        /*vertical-align: middle;*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*------------------- Selector de Imagenes ----------------*/
+    #Selector{
+        margin-top: 120px;
+    }
+
+    #Selector .Imagenes .Cartas{
+        display: none;
+    } 
+    
+    /* ---------------- Mision y Vision ------*/
+    #mision .mision-vision ul{
+        display: block;
+    }
+
+    #mision .mision-vision ul li{
+        padding: 10px;
+    }
+
+    /*---------------------- Titulo -----------------------*/
+
+    #titulo{
+        margin-top: 20px;
+    }
+    
+    #titulo .oferta h1{
+        width: 70%;
+        height: 60px;
+    }
+
+    /* ---------------- Contenido Carreras ------ */
+
+    #descripcion {
+        padding: 20px 10px;
+    }
+
+    #descripcion .imagen-texto{
+        display: block;
+        padding: 0px;   
+    }
+
+    #descripcion .imagen {
+        width: 100%;
+        position: static; /* Fija la imagen en su posición */
+        height: 100vh; /* Ocupa el 100% del viewport */
+        overflow: hidden; /* Evita que la imagen se desborde */
+        padding: 0px 20px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    #descripcion .imagen img {
+        padding: 20px;
+        width: 440px;
+        height: 559px;
+        object-fit: cover;
+        margin-top: 0px;
+    }
+
+    #descripcion .imagen-texto .Carreras{
+        width: 100%;
+        padding: 20px;
+        position: static; 
+    }
+
+    /* ----------------------- Galeria ------------*/
+
+    #Galeria .Mosaico{
+        display: block;
+    }
+
+    #Galeria .Mosaico .foto-1,
+    #Galeria .Mosaico .fotos-2,
+    #Galeria .Mosaico .fotos-3,
+    #Galeria .Mosaico .fotos-4,
+    #Galeria .Mosaico .fotos-5,
+    #Galeria .Mosaico .fotos-6{
+        padding-bottom: 5px;
+    }
+
+    #Galeria .Mosaico .imagen-con-texto{
+        padding-bottom: 5px;
+    }
+
+    /* ------------------ Datos Interesantes --------------*/
+
+    #Datos .Datos-Mosaico{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 49% 49% ;
+        grid-template-rows: 240px 240px 240px;
+    }
+
+    #Datos .Datos-Mosaico .dato-1,
+    #Datos .Datos-Mosaico .dato-2,
+    #Datos .Datos-Mosaico .dato-3,
+    #Datos .Datos-Mosaico .dato-4,
+    #Datos .Datos-Mosaico .dato-5,
+    #Datos .Datos-Mosaico .dato-6{
+    width: 90%;
+    margin: 10px 12px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 10px;
+    }
+}
