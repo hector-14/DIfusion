@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------ Carreras -----------------------------*/
+#nuestrasCarreras {
+    background-color: rgb(235, 235, 235);
+    color: white;
+    text-align: center;
+}
+
+#nuestrasCarreras .contenidoC{
+    padding: 80px 30px;
+}
+
+#nuestrasCarreras .contenidoC h1{
+    color: black;
+    margin-top: 0px;
+}
+
+#nuestrasCarreras .carta a{
+    text-decoration: none;
+    color: rgb(177, 161, 20);
+    font-size: 1.5em;
+}
+
+#nuestrasCarreras .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 35px;
+    border-radius: 15px;
+}
+
+
+.carta:first-child{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/cartaPro.jpg);
+    
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/cartaCont.jpg);
+
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/cartaAdmin.jpg);
+    
+}
+
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/cartaGast.webp);
+    
+}
+
+.carta:nth-child(5){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/cartaIndus.jpg);
+
+}
+
+/* ---------------------------------- instalacion --------------------------*/
+#instalacion h1{
+    text-align: center;
+}
+#instalacion .act1{
+    width: 500px;
+    padding: 20px 20px;
+    background-color: white
+}
+
+
+#instalacion .act{
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    height: 100px;
+}
+
+
+.act:first-child{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/futbol.jpg);
+    
+}
+
+.act:nth-child(2){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/voleibol.jpg);
+
+}
+
+.act:nth-child(3){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/basquet.jpg);
+    
+}
+
+.act:nth-child(4){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/ajedrez.jpg);
+    
+}
+
+.act:nth-child(5){
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(imagenes/musica.jpg);
+
+}

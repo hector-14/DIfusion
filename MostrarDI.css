@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    background-color: rgb(220 220 220);
+}
+
+
+/* ----------------------------------- Contenido carreras ------------------------------- */
+#servicio {
+    height: 400px;
+    padding: 10px 0px;
+}
+#servicio .contenido {
+    width: auto;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#servicio .contenido ul {
+    opacity: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+}
+
+#servicio .contenido ul.abajo {
+    opacity: 1;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+    animation: lateral 2s linear 1 forwards;    
+}
+
+#servicio .contenido ul li{
+    list-style: none;
+    width: 200%;
+    position: relative;
+}
+
+#servicio .contenido ul li img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
+#servicio .contenido ul li div{
+    background-color: rgba(29, 26, 26, 0.7);
+    position: absolute;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    margin-top: -40%;
+    height: -webkit-fill-available;
+    left: 50%;
+    text-align: center;
+}
+
+
+@keyframes lateral {
+    0% {margin-left: 0%;}
+    45% {margin-left: 0%;}
+
+    50% {margin-left: -100%;}
+    100% {margin-left: -100%;}
+}
+
+#servicio1 {
+    height: 400px;
+    padding: 10px 0px;
+}
+#servicio1 .contenido1 {
+    width: auto;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#servicio1 .contenido1 ul {
+    opacity: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+}
+
+#servicio1 .contenido1 ul.abajo {
+    opacity: 1;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+    animation: lateral-1 2s linear 1 forwards;    
+}
+
+#servicio1 .contenido1 ul li{
+    list-style: none;
+    width: 200%;
+    position: relative;
+}
+
+#servicio1 .contenido1 ul li img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
+#servicio1 .contenido1 ul li div{
+    background-color: rgba(29, 26, 26, 0.7);
+    position: absolute;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    margin-top: -40%;
+    height: -webkit-fill-available;
+    right: 50%;
+    text-align: center;
+}
+
+
+@keyframes lateral-1 {
+    0% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: 0%;}
+    100% {margin-left: 0%;}   
+}
+
+#servicio2 {
+    height: 400px;
+    padding: 10px 0px;
+}
+#servicio2 .contenido2 {
+    width: auto;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#servicio2 .contenido2 ul {
+    opacity: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+}
+
+#servicio2 .contenido2 ul.abajo {
+    opacity: 1;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+    animation: lateral 2s linear 1 forwards;    
+}
+
+#servicio2 .contenido2 ul li{
+    list-style: none;
+    width: 200%;
+    position: relative;
+}
+
+#servicio2 .contenido2 ul li img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
+#servicio2 .contenido2 ul li div{
+    background-color: rgba(29, 26, 26, 0.7);
+    position: absolute;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    margin-top: -40%;
+    height: -webkit-fill-available;
+    left: 50%;
+    text-align: center;
+}
+
+
+@keyframes lateral {
+    0% {margin-left: 0%;}
+    45% {margin-left: 0%;}
+
+    50% {margin-left: -100%;}
+    100% {margin-left: -100%;}
+}
+
+
+#servicio3 {
+    height: 400px;
+    padding: 10px 0px;
+}
+#servicio3 .contenido3 {
+    width: auto;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#servicio3 .contenido3 ul {
+    opacity: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+}
+
+#servicio3 .contenido3 ul.abajo {
+    opacity: 1;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200%;
+    animation: lateral-2 2s linear 1 forwards;    
+}
+
+#servicio3 .contenido3 ul li{
+    list-style: none;
+    width: 200%;
+    position: relative;
+}
+
+#servicio3 .contenido3 ul li img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
+#servicio3 .contenido3 ul li div{
+    background-color: rgba(29, 26, 26, 0.7);
+    position: absolute;
+    color: white;
+    padding: 10px;
+    margin: 0px;
+    margin-top: -40%;
+    height: -webkit-fill-available;
+    right: 50%;
+    text-align: center;
+}
+
+
+@keyframes lateral-2 {
+    0% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: 0%;}
+    100% {margin-left: 0%;}   
+}

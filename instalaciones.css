@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+#descripcion {
+    position: relative;
+    padding: 30px;
+}
+
+#descripcion .imagen-texto {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+#descripcion .imagen {
+    width: 50%;
+    position: sticky; /* Fija la imagen en su posición */
+    top: 0; /* Fija la imagen en la parte superior */
+    height: 100vh; /* Ocupa el 100% del viewport */
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+#descripcion .imagen img {
+    padding: 50px;
+    width: 440px;
+    height: 559px;
+    object-fit: cover;
+    margin-top: 40px;
+}
+
+#descripcion .imagen::before {
+    content: "";
+    display: block;
+    height: 30px; /* Ajusta la altura para evitar solapamiento */
+}
+
+#descripcion .Carreras {
+    width: 50%;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2; /* Asegura que esté por encima de la imagen */
+}
+
+
+#descripcion .imagen-texto .Carreras .contenidoC{
+    padding: 0px 20px;
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC h2{
+    color: #40d313;
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC h2::before{
+    content: "";
+    width: 1px;
+    height: 10%;
+    position: absolute;
+    background: black;
+    left: calc(4%);
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC h2::after{
+    content: "";
+    border-radius: 15px;
+    border: 2px solid #40d313;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #ffffff;
+    left: calc(1.5%);
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC a{
+    text-decoration: none;
+    background-color: rgba(240, 240, 240, 0.966);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    /*border: 1px solid #750375;*/
+}
+
+#descripcion .imagen-texto .Carreras .contenidoC a:hover{
+    background-color: rgba(18, 141, 2, 0.822);
+    color: #ffffff;
+}
