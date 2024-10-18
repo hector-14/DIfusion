@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
     setTimeout(function() {
         // Redirige a index.php
-        window.location.href = "index.php";
+        window.location.href = "index.html";
     }, 2000);
 });
