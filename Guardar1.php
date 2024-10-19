@@ -39,6 +39,10 @@ if (isset($_POST['registrar'])) {
                 echo json_encode(array("status" => "error", "message" => "Error al guardar las carreras: " . $conexion->error));
             }
 
+            echo "<script type='text/javascript'>
+                    window.Android.handleResponse('$response');
+                  </script>";
+
         } else {
             echo json_encode(array("status" => "error", "message" => "Error al registrar el usuario: " . $conexion->error));
         }
