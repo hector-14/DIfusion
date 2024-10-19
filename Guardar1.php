@@ -17,6 +17,7 @@ if (isset($_POST['registrar'])) {
         $resultado = mysqli_query($conexion, $consulta);
 
         if ($resultado) {
+
             // Obtener el ID del usuario recién registrado
             $idUsuario = mysqli_insert_id($conexion);
 
@@ -30,27 +31,33 @@ if (isset($_POST['registrar'])) {
             $resultado1 = mysqli_query($conexion, $consulta1);
             $resultado2 = mysqli_query($conexion, $consulta2);
 
+            // Ejecutar la consulta y verificar si se guardó correctamente
             if ($resultado1 && $resultado2) {
-                // Enviar redirección al cliente
-                echo "<script type='text/javascript'>
-                        alert('Registro exitoso');
-                        window.location.href = 'index.html';
-                      </script>";
+                // Asignar la respuesta correctamente
+                $response = json_encode(array("status" => "success", "message" => "Registro exitoso"));
             } else {
-                echo json_encode(array("status" => "error", "message" => "Error: " . $conexion->error));
+                $response = json_encode(array("status" => "error", "message" => "Error: " . $conexion->error));
             }
 
         } else {
-            echo json_encode(array("status" => "error", "message" => "Error al guardar el usuario: " . $conexion->error));
+            $response = json_encode(array("status" => "error", "message" => "Error al guardar el usuario: " . $conexion->error));
         }
+
     } else {
-        echo json_encode(array("status" => "error", "message" => "Por favor completa todos los campos requeridos."));
+        $response = json_encode(array("status" => "error", "message" => "Por favor completa todos los campos requeridos."));
     }
 } else {
-    echo json_encode(array("status" => "error", "message" => "Algo salió mal."));
+    $response = json_encode(array("status" => "error", "message" => "Algo salió mal."));
 }
+
+// Mostrar la respuesta al cliente
+echo "<script type='text/javascript'>
+        window.Android.handleResponse('$response');
+      </script>";
 
 // Cerrar la conexión a la base de datos
 $conexion->close();
+
 ?>
+
 
