@@ -1,5 +1,4 @@
 <?php
-
 include("conexionDB.php");
 
 // Verificar la conexión
@@ -13,7 +12,7 @@ if (isset($_POST['registrar'])) {
         $apellido = $_POST['apellido'];
         $correo = $_POST['correo'];
 
-        // Guardar datos en la tabla usuario
+        //Guardar datos en la base de los usuarios
         $consulta = "INSERT INTO usuario (nombre, apellidos, correo, fecha) VALUES ('$nombre', '$apellido', '$correo', NOW())";
         $resultado = mysqli_query($conexion, $consulta);
 
@@ -32,29 +31,31 @@ if (isset($_POST['registrar'])) {
             $resultado1 = mysqli_query($conexion, $consulta1);
             $resultado2 = mysqli_query($conexion, $consulta2);
 
-            // Verificar si ambas consultas fueron exitosas
+            // Ejecutar la consulta y verificar si se guardó correctamente
             if ($resultado1 && $resultado2) {
-                echo json_encode(array("status" => "success", "message" => "Registro exitoso"));
+                // Asignar la respuesta correctamente
+                $response = json_encode(array("status" => "success", "message" => "Registro exitoso"));
             } else {
-                echo json_encode(array("status" => "error", "message" => "Error al guardar las carreras: " . $conexion->error));
+                $response = json_encode(array("status" => "error", "message" => "Error: " . $conexion->error));
             }
 
-            echo "<script type='text/javascript'>
-                    window.Android.handleResponse('$response');
-                  </script>";
-
         } else {
-            echo json_encode(array("status" => "error", "message" => "Error al registrar el usuario: " . $conexion->error));
+            $response = json_encode(array("status" => "error", "message" => "Error al guardar el usuario: " . $conexion->error));
         }
 
-        // Cerrar la conexión a la base de datos
-        $conexion->close();
-
     } else {
-        echo json_encode(array("status" => "error", "message" => "Por favor complete todos los campos del formulario"));
+        $response = json_encode(array("status" => "error", "message" => "Por favor completa todos los campos requeridos."));
     }
 } else {
-    echo json_encode(array("status" => "error", "message" => "Solicitud no válida"));
+    $response = json_encode(array("status" => "error", "message" => "Algo salió mal."));
 }
+
+// Mostrar la respuesta al cliente
+echo "<script type='text/javascript'>
+        window.Android.handleResponse('$response');
+      </script>";
+
+// Cerrar la conexión a la base de datos
+$conexion->close();
 
 ?>
