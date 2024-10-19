@@ -17,7 +17,6 @@ if (isset($_POST['registrar'])) {
         $resultado = mysqli_query($conexion, $consulta);
 
         if ($resultado) {
-
             // Obtener el ID del usuario recién registrado
             $idUsuario = mysqli_insert_id($conexion);
 
@@ -31,33 +30,26 @@ if (isset($_POST['registrar'])) {
             $resultado1 = mysqli_query($conexion, $consulta1);
             $resultado2 = mysqli_query($conexion, $consulta2);
 
-            // Ejecutar la consulta y verificar si se guardó correctamente
             if ($resultado1 && $resultado2) {
-                // Asignar la respuesta correctamente
-                $response = json_encode(array("status" => "success", "message" => "Registro exitoso"));
+                // Devuelve solo JSON
+                echo json_encode(array("status" => "success", "message" => "Registro exitoso"));
             } else {
-                $response = json_encode(array("status" => "error", "message" => "Error: " . $conexion->error));
+                echo json_encode(array("status" => "error", "message" => "Error: " . $conexion->error));
             }
 
         } else {
-            $response = json_encode(array("status" => "error", "message" => "Error al guardar el usuario: " . $conexion->error));
+            echo json_encode(array("status" => "error", "message" => "Error al guardar el usuario: " . $conexion->error));
         }
-
     } else {
-        $response = json_encode(array("status" => "error", "message" => "Por favor completa todos los campos requeridos."));
+        echo json_encode(array("status" => "error", "message" => "Por favor completa todos los campos requeridos."));
     }
 } else {
-    $response = json_encode(array("status" => "error", "message" => "Algo salió mal."));
+    echo json_encode(array("status" => "error", "message" => "Algo salió mal."));
 }
-
-// Mostrar la respuesta al cliente
-echo "<script type='text/javascript'>
-        window.Android.handleResponse('$response');
-      </script>";
 
 // Cerrar la conexión a la base de datos
 $conexion->close();
-
 ?>
+
 
 
