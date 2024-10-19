@@ -47,6 +47,11 @@ if (isset($_POST['registrar'])) {
     echo json_encode(array("status" => "error", "message" => "Algo salió mal."));
 }
 
+// Mostrar la respuesta al cliente
+echo "<script type='text/javascript'>
+        window.Android.handleResponse('$response');
+      </script>";
+
 // Cerrar la conexión a la base de datos
 $conexion->close();
 ?>
