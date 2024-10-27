@@ -16,7 +16,7 @@
                 <img src="imagenes/TESOEM.png" alt="">
             </div>
             <div class="Formulario">
-                <form action="Guardar1.php" method="post">
+                <form action="Guardar.php" method="post">
                     <h1>Registrate para saber más</h1>
                     <label for="">Nombre:</label><br>
                     <input type="text" name="nombre" placeholder="Nombre" required><br>
