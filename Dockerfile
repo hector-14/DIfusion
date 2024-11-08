@@ -16,7 +16,8 @@ COPY . /var/www/html/
 # Instala Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Instala las dependencias de Composer (incluido PHPMailer)
+# Accede a la carpeta donde está el archivo composer.json antes de instalar
+WORKDIR Difusion/phpmailer
 RUN composer install --no-dev --optimize-autoloader
 
 # Da permisos a la carpeta donde están tus archivos
