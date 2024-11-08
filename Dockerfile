@@ -1,15 +1,14 @@
 # Imagen base de PHP con Apache
 FROM php:8.1-apache
 
-# Instala las dependencias requeridas para PHPMailer (SMTP, SSL, etc.)
-RUN docker-php-ext-install mysqli
+# Instala las extensiones requeridas y Composer
+RUN apt-get update && apt-get install -y \
+    php-mbstring \
+    php-xml \
+    && docker-php-ext-install mysqli \
+    && rm -rf /var/lib/apt/lists/*
 
-# Da permisos a los archivos del proyecto en el contenedor
-RUN chmod -R 755 /var/www/html
-
-RUN apt-get update && apt-get install -y php-mbstring php-xml
-
-# Instala Composer desde otra imagen
+# Copia Composer desde otra imagen y da permisos a la carpeta de tu proyecto
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copia los archivos del proyecto a la carpeta del servidor
