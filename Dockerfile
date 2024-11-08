@@ -8,16 +8,14 @@ RUN chmod -R 755 /path/to/your/project
 
 RUN apt-get update && apt-get install -y php-mbstring php-xml
 
-RUN apt-get update && apt-get install -y composer
+# Instala Composer desde otra imagen
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copia los archivos del proyecto a la carpeta del servidor
 COPY . /var/www/html/
 
-# Instala Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
 # Accede a la carpeta donde está el archivo composer.json antes de instalar
-WORKDIR Difusion/phpmailer
+WORKDIR /var/www/html/Difusion/phpmailer
 RUN composer install --no-dev --optimize-autoloader
 
 # Da permisos a la carpeta donde están tus archivos
