@@ -1,14 +1,15 @@
-# Imagen base de PHP con Apache
+# Usa una imagen base de PHP con Apache
 FROM php:8.1-apache
 
-# Instala las extensiones requeridas y Composer
-RUN apt-get update && apt-get install -y \
+# Instala las dependencias requeridas para PHPMailer (SMTP, SSL, etc.)
+RUN apt-get update -y && apt-get install -y \
+    apt-utils \
     php-mbstring \
     php-xml \
     && docker-php-ext-install mysqli \
     && rm -rf /var/lib/apt/lists/*
 
-# Copia Composer desde otra imagen y da permisos a la carpeta de tu proyecto
+# Instala Composer en el contenedor
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copia los archivos del proyecto a la carpeta del servidor
@@ -22,7 +23,7 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
-# Exponer el puerto 80 para acceder al servidor
+# Expone el puerto 80 para acceder al servidor
 EXPOSE 80
 
 # Inicia el servidor Apache
