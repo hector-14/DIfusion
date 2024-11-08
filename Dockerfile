@@ -12,7 +12,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update && apt-get install -y composer
 
-# Instala las dependencias de Composer (incluido PHPMailer)
+# Accede a la carpeta donde está el archivo composer.json antes de instalar
+WORKDIR ../phpmailer
 RUN composer install --no-dev --optimize-autoloader
 
 # Da permisos a la carpeta donde están tus archivos
