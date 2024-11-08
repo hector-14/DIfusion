@@ -10,6 +10,8 @@ COPY . /var/www/html/
 # Instala Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+RUN apt-get update && apt-get install -y composer
+
 # Instala las dependencias de Composer (incluido PHPMailer)
 RUN composer install --no-dev --optimize-autoloader
 
