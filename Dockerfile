@@ -4,7 +4,8 @@ FROM php:8.1-apache
 # Instala las dependencias requeridas para PHPMailer (SMTP, SSL, etc.)
 RUN docker-php-ext-install mysqli
 
-RUN chmod -R 755 /path/to/your/project
+# Da permisos a los archivos del proyecto en el contenedor
+RUN chmod -R 755 /var/www/html
 
 RUN apt-get update && apt-get install -y php-mbstring php-xml
 
@@ -27,4 +28,3 @@ EXPOSE 80
 
 # Inicia el servidor Apache
 CMD ["apache2-foreground"]
-
