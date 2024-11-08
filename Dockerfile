@@ -10,10 +10,7 @@ COPY . /var/www/html/
 # Instala Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-RUN apt-get update && apt-get install -y composer
-
-# Accede a la carpeta donde está el archivo composer.json antes de instalar
-WORKDIR difusion/phpmailer
+# Instala las dependencias de Composer (incluido PHPMailer)
 RUN composer install --no-dev --optimize-autoloader
 
 # Da permisos a la carpeta donde están tus archivos
@@ -25,3 +22,4 @@ EXPOSE 80
 
 # Inicia el servidor Apache
 CMD ["apache2-foreground"]
+
