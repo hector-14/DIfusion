@@ -12,30 +12,29 @@
     <section id="titulo-Act">
         <div class="Act-fut">
             <h1>Deporte y Cultura</h1>
-            
-            <img src="imagenes/PortadaT1.png" alt="">
+            <img class="Tuzo" src="imagenes/PortadaT1.png" alt="">
         </div>
     </section>
 
-    <section id="subtitulo">
-            <p>Habilidades que ayudan a tu desarrollo profesional, demuestra tu talento.</p> 
+    <section class="Titulo">
+        <h1>Deportes</h1>
     </section>
 
     <section id="Actividad">
         <div class="Deportes">
                 <div class="Principal">
-                    <img class="main" src="imagenes/futb.jpg" alt="">
+                    <img class="main" src="Nvaimagenes/FutFem.jpg" alt="">
                     <h1 class="name">Fútbol</h1>
                 </div>
                 <div class="Cartas_contenedor">
                     <div class="Contenido" data-name="Fútbol">
-                        <img class="Cartas active" src="imagenes/futb.jpg" alt="">
+                        <img class="Cartas active" src="Nvaimagenes/FutFem.jpg" alt="">
                     </div>
                     <div class="Contenido" data-name="Voleibol">
                         <img class="Cartas" src="imagenes/volei.jpg" alt="">
                     </div>
                     <div class="Contenido" data-name="Futbol Americano">
-                        <img class="Cartas" src="imagenes/americano.jpg" alt="">
+                        <img class="Cartas" src="Nvaimagenes/DepFutbolA1.jpg" alt="">
                     </div>
                     <div class="Contenido" data-name="Ajedrez">
                         <img class="Cartas" src="imagenes/ajedrez1.jpg" alt="">
@@ -44,17 +43,17 @@
                         <img class="Cartas" src="imagenes/karate.jpg" alt="">
                     </div>
                     <div class="Contenido" data-name="Basquetbol">
-                        <img class="Cartas" src="imagenes/basq.jpg" alt="">
+                        <img class="Cartas" src="Nvaimagenes/DepBasquetbol.jpg" alt="">
                     </div>
                     <div class="Contenido" data-name="Gymnasio">
-                        <img class="Cartas" src="imagenes/karate.jpg" alt="">
+                        <img class="Cartas" src="imagenes/Gymnasio1.jpg" alt="">
                     </div>
 
                 </div>
         </div>
     </section>
 
-    <section id="Titulo">
+    <section class="Titulo">
             <h1>Cultura</h1>        
     </section>
 
@@ -75,58 +74,49 @@
         </div>
     </section>
 
-    <section id="Titulo">
-        <h1>Día de la Independencia</h1>
+    <section class="Titulo">
+        <h1>Festividades</h1>
     </section>
 
-    <section id="Galeria">
-        <div class="Mosaico">
-            <div class="foto"><img src="imagenes/inde1.jpg" alt=""></div>
-            <div class="foto"><img src="imagenes/inde2.jpg" alt=""></div>
-            <div class="foto"><img src="imagenes/inde3.jpg" alt=""></div>
-            <div class="foto"><img src="imagenes/inde4.jpg" alt=""></div>
-            <div class="foto"><img src="imagenes/inde5.jpg" alt=""></div>
-            <div class="foto"><img src="imagenes/cultura.jpg" alt=""></div>
-        </div>
-    </section>
-
-    <section id="Titulo">
-        <h1>Día de Muertos</h1>
-    </section>
-
-    <section id="Galeria">
-        <div class="Mosaico">
-            <div class="foto">
-                <img src="imagenes/cultura.jpg" alt="">
-                <div class="foto2">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="foto">
-                <img src="imagenes/diaM.jpg" alt="">
-                <div class="foto2">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="foto">
-                <img src="imagenes/diam1.jpg" alt="">
-                <div class="foto2">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="foto">
-                <img src="imagenes/diam2.jpg" alt="">
-            </div>
-            <div class="foto">
-                <img src="imagenes/diam3.jpg" alt="">
-            </div>
-            <div class="foto">
-                <img src="imagenes/diam4.jpg" alt="">
+    <div class="slideshow-container" id="Carrusel">
+        <div class="mySlides fade">    
+            <img src="imagenes/diam3.jpg" alt="">
+            <div class="span">
             </div>
         </div>
-    </section>
+        <div class="mySlides fade">
+            <img src="imagenes/diam1.jpg" alt="">
+            <div class="span">
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="imagenes/inde3.jpg" alt="">
+            <div class="span"> 
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="imagenes/inde4.jpg" alt="">
+            <div class="span">
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="imagenes/diam4.jpg" alt="">
+            <div class="span">
+            </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="imagenes/cultura.jpg" alt="">
+            <div class="span">
+            </div>
+        </div>
 
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    
     <script src="javascript/A_galeria.js"></script>
+    <script src="javascript/A_Slider.js"></script>
 </body>
 </html>
 <?php include "pie.php"?>
