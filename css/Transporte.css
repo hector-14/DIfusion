@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    background-color: rgb(245, 245, 245);
+}
+
+/* -------------------------------------- Estilos Header ---------------------------------------- */
+
+#barraSuperior{
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    transition: 0.7s;
+    padding: 5px;
+    z-index: 100;
+}
+
+#barraSuperior.abajo{
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    z-index: 100;
+}
+
+#barraSuperior .contenedor{
+    display: flex;
+    justify-content:space-between;
+}
+
+#barraSuperior .contenedor .imagen{
+    width: 180px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#barraSuperior ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 65px;
+}
+
+#barraSuperior .contenedor ul li{
+    list-style: none;
+    margin: 0px 30px;
+}
+
+#barraSuperior .contenedor ul li a{
+    text-decoration: none;
+    color: rgb(36, 34, 34);
+    font-size: 1.1em;
+}
+
+#barraSuperior .contenedor ul li .btn{
+    border: 1px solid #3cd908e3;
+    background-color: #08af04c4;
+    color: white;
+    border-radius: 3px;
+    display: flex;
+    width: 100px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+}
+
+#barraSuperior .contenedor ul li .btn:hover{
+    color: #40d313;
+    background-color: #ffffff;
+    border: 3px solid rgba(54, 179, 4, 0.8);
+    box-shadow: 0 2px 10px rgba(34, 34, 34, 0.75);
+}
+
+#barraSuperior .contenedor ul li a img{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+}
+
+/* ---------------------------- Video Emergente -----------------------------*/
+
+.video-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 41, 41, 0.91);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  
+  iframe {
+    height: 60vh;
+  }
+  
+  button {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+/* ---------------- Estilo para imagen de la pantalla ----------------------*/
+
+.slideshow-container {
+    width: 100%;
+    height: 450px;
+    margin-top: 77px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.slideshow-container .mySlides {
+    display: none;
+    width: 100%;
+    height: 450px;
+}
+
+.slideshow-container .mySlides img {
+    /*vertical-align: middle;*/
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    margin: -30px 10px;
+}
+/* Position the "next button" to the right */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: rgba(0, 0, 0, 1);
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.botones{
+    position: absolute;
+    bottom: 5%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    background-color: #101010;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border: 2px solid white;
+}
+
+.active, .dot:hover {
+    background-color: #f1f1f1;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+.dot{
+height: 13px;
+width: 13px;
+}
+
+@media only screen and (max-width: 500px) {
+.prev, .next,.text {font-size: 14px}
+}
+
+/* ------------------------ Título -------------------------- */
+
+#Titulo{
+    border-bottom: 1px solid #40d313;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#Titulo h1{
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0px;
+    padding: 8px 0px;
+}
+
+#Titulo p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 0px;
+}
+
+/* ------------------------ Rutas -------------------------- */
+#Trasporte{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#Trasporte .trasporte{
+    background-color: #ffffff;
+    margin: 10px 540px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#Trasporte .Contenido-rutas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Trasporte .Contenido-rutas ul{
+    height: 570px;
+    padding: 15px;
+    margin-right: 60px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+#Trasporte .Contenido-rutas ul li{
+    list-style: none;
+    width: 150px;
+    height: 55px;
+    margin: 5px;
+    border: 1px solid #40d313;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Trasporte .Contenido-rutas ul li a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+#Trasporte .Contenido-rutas ul li a .rutas {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #101010;
+}
+
+#Trasporte .Contenido-rutas ul li a .rutas .span{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(40,40,40,1);
+    color: #40d313;
+    border-radius: 9px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+#Trasporte .Contenido-rutas ul li a .rutas .span:hover{
+    opacity: 1;
+}
+
+
+#Trasporte .ruta h1{
+    margin: 0px;
+}
+
+#Trasporte .ruta .turnos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Trasporte .ruta .turnos .matutino,
+#Trasporte .ruta .turnos .vespertino{
+    padding: 10px 30px; 
+}
+
+#Trasporte .ruta .turnos p{
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+}
+
+#Trasporte .Contenido-rutas .ruta{
+    height: 570px;
+    width: 70%;
+    display: none;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+#Trasporte .Contenido-rutas .ruta h1{
+    padding: 5px 0px;
+}
+
+
+#Trasporte .Contenido-rutas .ruta.activo{
+    display: block;
+}
+
+/*---------------------------------------- Respossive ----------------------------------------- */
+/*---------------------------         Pantallas de 320 a 450      -------------------------------------*/
+
+@media (min-width: 320px) and (max-width: 550px){
+
+/* ----------------------- Header ----------------------------- */
+    
+    #barraSuperior .contenedor {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #barraSuperior .contenedor .imagen{
+        width: 45%;
+        padding-top: 1%;
+    }
+
+    #barraSuperior .contenedor ul {
+        height: auto; /* Cambia la altura a automática */
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+
+    #barraSuperior .contenedor ul li {
+        padding: 0px 15px;
+        margin: 0px;
+    }
+
+    #barraSuperior .contenedor ul li .btn {
+        width: 80px; /* Redefine el ancho del botón */
+        height: 32px; /* Redefine la altura del botón */
+    }
+
+    #barraSuperior .contenedor ul li a img {
+        width: 30px; /* Redefine el tamaño de las imágenes */
+        height: 30px; /* Redefine el tamaño de las imágenes */
+    }
+
+    .video-popup {
+        top: 105px;
+    }
+
+
+    .slideshow-container {
+        width: 100%;
+        height: 230px;
+        margin-top: 120px;
+        
+    }
+
+    .slideshow-container .mySlides {
+        height: 230px;
+    }
+
+
+/* ----------------------------------------------- Título ---------------------------------------------------- */
+
+    #Titulo {
+        padding: 10px 20px;
+        margin: 10px 0px;
+    }
+
+    #Titulo h1 {
+        font-size: 20px;
+    }
+
+    #Titulo p {
+        font-size: 10px;
+    }
+
+/* ------------------------ Rutas -------------------------- */
+
+    #Trasporte .trasporte {
+        margin: 0px 130px;
+        border-radius: 10px;
+    }
+
+    #Trasporte .Contenido-rutas {
+        display: block;
+    }
+
+    #Trasporte .Contenido-rutas ul {
+        display: grid;
+        grid-template-columns: 24.3% 24.3% 24.3% 24.3%;
+        grid-template-rows: 70px 70px 70px;
+        height: auto;
+        margin: 11px;
+        padding: 10px;
+    }
+
+    #Trasporte .Contenido-rutas ul li {
+        font-size: 10px;
+        width: 80px;
+    }
+
+    #Trasporte .Contenido-rutas .ruta {
+        width: 100%;
+        height: 480px;
+        padding: 10px;
+    }
+
+    #Trasporte .Contenido-rutas .ruta h1 {
+        font-size: 15px;
+    }
+
+    #Trasporte .ruta .turnos {
+        font-size: 12px;
+    }
+
+    #Trasporte .ruta .turnos p {
+        font-size: 10px;
+    }
+
+}

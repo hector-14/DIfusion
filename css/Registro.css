@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.registro{
+    text-align: center;
+    background-image: url(../imagenes/Tuzos.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px;
+
+}
+
+.registro .contenido{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(10, 10, 10, 80%);
+}
+
+.registro .Logo{
+    margin-top: 60px;
+    transform: translate(-80px, 0px);
+}    
+
+.registro .Logo img{
+    width: 250px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.registro .contenido .boton{
+    padding: 30px 0px;
+}
+
+.registro .Formulario{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.Formulario form h1{
+    color: #fff;
+    font-size: 2em;
+}
+
+.Formulario form label{
+    color: white;
+}
+
+.Formulario form input{
+    margin: 10px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+}
+
+.Formulario form input:focus{
+    border-color: #15ff00;
+    box-shadow: 0 0 0 3px rgba(55, 255, 0, 0.2);
+    border-radius: 15px;
+}
+
+.Formulario form .PCarrera,
+.Formulario form .SCarrera{
+    margin: 5px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: none;
+    padding: 10px;
+    color: white;
+}
+.Formulario form .PCarrera:focus,
+.Formulario form .SCarrera:focus{
+    border-color: #15ff00;
+    box-shadow: 0 0 0 3px rgba(55, 255, 0, 0.301);
+    border-radius: 15px;
+}
+
+
+.Formulario form .PCarrera option,
+.Formulario form .SCarrera option{
+    background-color: rgba(10, 10, 10, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Formulario form .PCarrera option:checked,
+.Formulario form .SCarrera option:checked{
+    color: #19cf1e;
+    background: rgba(10, 10, 10, 0.5);
+}
+
+.Formulario form .PCarrera option,
+.Formulario form .SCarrera option:hover{
+    color: white;
+}
+
+
+.Formulario form .submit{
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid #3cd908e3;
+    background-color: #08af04c4;
+    color: white;
+}
+
+.Formulario form .submit:hover{
+    border: 3px solid #fff;
+    transform: scale(1.1);
+}
+
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 700px) {
+    .registro{
+        background-size: 500px;
+    }
+
+    .registro .contenido{
+        height: auto;
+        display: block;
+    }
+
+    .registro .Logo{
+        margin-top: 0px;
+        transform: translate(0px, 0px);
+        padding: 15px;
+    }
+    
+    .registro .Formulario{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Formulario form h1{
+        font-size: 1.8em;
+    }
+}
