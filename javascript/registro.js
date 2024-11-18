@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         input: "checkbox",
         inputValue: 0,
         inputPlaceholder: `
-          <a href="Aviso.php">Terminos y Condiciones</a>
+          <a href="Aviso.html">Terminos y Condiciones</a>
         `,
         
         inputValidator: (result) => {
