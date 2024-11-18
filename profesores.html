@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Profesores.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header id="barraSuperior">   
+        <div class="contenedor">
+            <img class="imagen" src="imagenes/TESOEM.png" alt="">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <div class="opcion">
+                            <img src="iconos/incio.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="ubicacion.html">
+                        <div class="opcion">
+                            <img src="iconos/marcador.png" alt="">
+                            
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="registro.html" class="btn btn-1">Registrate</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <section id="Portada">
+        <div class="titulo">
+            <h1>Profesores</h1>
+        </div>
+    </section>
+
+    <section class="titulo">
+        <div class="texto">
+            <h1>Experiencias</h1>
+        </div>
+    </section>
+
+    <section id="Experiencias">
+        <div class="video">
+            <iframe src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FTESOEMOficial%2Fvideos%2F461851705787157%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FTESOEMOficial%2Fvideos%2F529747868994138%2F&show_text=false&width=560&t=0" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+        <div class="button">
+            <span class="puntos" onclick="Slide2(1)"></span>
+            <span class="puntos" onclick="Slide2(2)"></span>
+        </div>       
+    </section>
+
+    <section class="titulo">
+        <div class="texto">
+            <h1>Capacitación de profesores</h1>
+        </div>
+    </section>
+
+    <section id="Slider">
+        <div class="profesor">
+            <div class="imagen">
+                <img src="Nvaimagenes/CBIOCOM.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1>Mtra. Karla Janette Hidalgo Escalona</h1>
+                <h2>Ingeniería Ambiental</h2>
+                <span>"Taller Elaboración de Biocumbustible"</span>
+            </div>
+        </div>
+        <div class="profesor">
+            <div class="imagen">
+                <img src="Nvaimagenes/CMPA.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1></h1>
+                <h2>Ingeniería en Administración</h2>
+                <span>"Manejo del Sistema Administrativo Empresarial (SAE)"</span>
+            </div>
+        </div>
+        <div class="profesor">
+            <div class="imagen">
+                <img src="Nvaimagenes/TUTORIAS.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1>Mtra. Maria Cristina Rodríguez Me días y el Mtro. Juan Manuel Valdez Chávez</h1>
+                <h2>Ingeniería en Sistemas Computacionales</h2>
+                <span>"Estrategia para dar seguimiento a tutorías"</span>
+            </div>
+        </div>
+        <div class="profesor">
+            <div class="imagen">
+                <img src="Nvaimagenes/ELABO.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1> Mtra. Magaly Gonzalez Mota y el Mtro. Juan Carlos Mendoza Herrera</h1>
+                <h2>Ingeniería en Sistemas Computacionales</h2>
+                <span>"Elaboración de reactivos para el concurso de Matemáticas"</span>
+            </div>
+        </div>
+        <div class="profesor">
+            <div class="imagen">
+                <img src="Nvaimagenes/HABBLAN.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1>Lic. Julieta López</h1>
+                <h2></h2>
+                <span>"Habilidades blandas para docentes"</span>
+            </div>
+        </div>
+        <div class="profesor">
+            <div class="imagen">
+                <img src="Nvaimagenes/GASTRO.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1>Dra. Yolanda Escamilla Lozano y el Dr. Juan Garcés Reyes.</h1>
+                <h2>Licenciatura en Gastronomía</h2>
+                <span>"Introducción para la elaboración de cerveza."</span>
+            </div>
+        </div>
+        <div class="profesor">
+            <div class="imagen">
+                <img src="NvaImagenes/ESTRUMET.jpg" alt="">
+            </div>
+            <div class="descripcion">
+                <h1>Mtro. Juan Manuel Estrada Basulto</h1>
+                <h2>Ingeniería Industrial</h2>
+                <span>"Estructuras Metálicas"</span>
+            </div>
+        </div>
+        <div class="botones">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </section>
+    
+    <script src="javascript/P_SliderVideo.js"></script>
+    <script src="javascript/P_Slider.js"></script>
+</body>
+</html>
+
+<?php include "pie.php"?>
