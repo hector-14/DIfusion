@@ -56,47 +56,47 @@ if ($resultado3->num_rows > 0) {
                         case 'Industrial':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Industrial.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png'; 
-                            $boton = 'http://localhost/Difusion2/Industrial.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Industrial.html';
                             break;
                         case 'Contabilidad':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Contabilidad.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton = 'http://localhost/Difusion2/Contador_P%C3%BAblico.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Contador_Público.html';
                             break;
                         case 'Administración':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Administracion.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton = 'http://localhost/Difusion2/Administraci%C3%B3n.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Administración.html';
                             break;
                         case 'Sistemas Computacionales':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Sistemas Computacionales.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton = 'http://localhost/Difusion2/Sistemas.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Sistemas.html';
                             break;
                         case 'Energías Renovables':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Energías Renovables.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoTICS.png';
-                            $boton = 'http://localhost/Difusion2/Energ%C3%ADas.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Energías.html';
                             break;
                         case 'Tecnologias de la Información y Comunicación':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Tecnologias de la Información y Comunicación.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoTICS.png';
-                            $boton = 'http://localhost/Difusion2/Tecnolog%C3%ADas.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Tecnologías.html';
                             break;
                         case 'Ambiental':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Ambiental.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton = 'http://localhost/Difusion2/Ambiental.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Ambiental.html';
                             break;
                         case 'Gastronomía':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Gastronomia.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton = 'http://localhost/Difusion2/Gastronom%C3%ADa.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Gastronomía.html';
                             break;
                         case 'Sistemas Automotrices':
                             $contenidoCorreo = 'Contenido personalizado para la carrera de Sistemas Automotrices.';
                             $imagen = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton = 'http://localhost/Difusion2/Automotrices.php';
+                            $boton = 'https://difusion-production-c628.up.railway.app/Automotrices.html';
                             break;
                         // Añade más casos según las carreras que tengas
                     }
@@ -125,47 +125,47 @@ if ($resultado3->num_rows > 0) {
                         case 'Industrial':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Industrial.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png'; 
-                            $boton2 = 'http://localhost/Difusion2/Industrial.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Industrial.html';
                             break;
                         case 'Contabilidad':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Contabilidad.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton2 = 'http://localhost/Difusion2/Contador_P%C3%BAblico.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Contador_Público.html';
                             break;
                         case 'Administración':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Administracion.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton2 = 'http://localhost/Difusion2/Administraci%C3%B3n.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Administración.html';
                             break;
                         case 'Sistemas Computacionales':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Sistemas Computacionales.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton2 = 'http://localhost/Difusion2/Sistemas.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Sistemas.html';
                             break;
                         case 'Energías Renovables':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Energías Renovables.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoTICS.png';
-                            $boton2 = 'http://localhost/Difusion2/Energ%C3%ADas.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Energías.html';
                             break;
                         case 'Tecnologias de la Información y Comunicación':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Tecnologias de la Información y Comunicación.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoTICS.png';
-                            $boton2 = 'http://localhost/Difusion2/Tecnolog%C3%ADas.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Tecnologías.html';
                             break;
                         case 'Ambiental':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Ambiental.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton2 = 'http://localhost/Difusion2/Ambiental.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Ambiental.html';
                             break;
                         case 'Gastronomía':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Gastronomia.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton2 = 'http://localhost/Difusion2/Gastronom%C3%ADa.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Gastronomía.html';
                             break;
                         case 'Sistemas Automotrices':
                             $contenidoCorreo2 = 'Contenido personalizado para la carrera de Sistemas Automotrices.';
                             $imagen2 = 'https://raw.githubusercontent.com/hector-14/Imagenes/main/Imagenes_Email/CorreoGastro.png';
-                            $boton2 = 'http://localhost/Difusion2/Automotrices.php';
+                            $boton2 = 'https://difusion-production-c628.up.railway.app/Automotrices.html';
                             break;
                         // Añade más casos según las carreras que tengas
                     }
@@ -332,7 +332,7 @@ if ($resultado3->num_rows > 0) {
                                         <p>¡Queremos ayudarte con tus dudas!</p>
                                     </div>
                                     <div class="link" style="background-color: rgb(255, 255, 255);">
-                                        <a href="http://localhost/Difusion2/index.php">Visitanos</a>
+                                        <a href="https://difusion-production-c628.up.railway.app/index.html">Visitanos</a>
                                     </div>
                                     <div class="Bienvenido">
                                         <p>ó</p>
