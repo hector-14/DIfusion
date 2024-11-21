@@ -1,0 +1,2 @@
+web: php /app/EnviarMail.php
+
