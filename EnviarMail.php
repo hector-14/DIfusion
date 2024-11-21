@@ -3,9 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 include("conexionDB.php");
 
@@ -180,8 +178,8 @@ if ($resultado3->num_rows > 0) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Cambia esto por tu servidor SMTP
             $mail->SMTPAuth = true;
-            $mail->Username = 'skillet11real@gmail.com'; // Cambia esto por tu dirección de correo
-            $mail->Password = 'lfee jtxi dbxx tksg'; // Cambia esto por tu contraseña
+            $mail->Username = getenv('SMTP_USER');         // Acceder a la variable de entorno SMTP_USER
+            $mail->Password = getenv('SMTP_PASS');
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
