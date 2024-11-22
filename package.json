@@ -1,8 +1,8 @@
 {
-  "name": "difusion2",
+  "name": "Difusion",
   "version": "1.0.0",
   "description": "",
-  "main": "animacion.js",
+  "main": "cronjobs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
