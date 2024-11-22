@@ -1,2 +1,1 @@
-web: php /app/EnviarMail.php
-
+worker: node cron-job.js
