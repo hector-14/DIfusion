@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const path = require('path');
 
 // Ruta al archivo PHP que deseas ejecutar
-const phpScriptPath = path.join(__dirname, 'Enviar.php');
+const phpScriptPath = path.join(__dirname, 'EnviarMail.php');
 
 // Función para ejecutar el script PHP
 const runPhpScript = () => {
