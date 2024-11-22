@@ -1,16 +1,12 @@
 {
-  "name": "Difusion",
+  "name": "cron-job-project",
   "version": "1.0.0",
-  "description": "",
   "main": "cronjobs.js",
   "scripts": {
-  "start": "node cronjobs.js"
-}
-,
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+    "start": "node cronjobs.js"
+  },
   "dependencies": {
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.0"
   }
 }
+
